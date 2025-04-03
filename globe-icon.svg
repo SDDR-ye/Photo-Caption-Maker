@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <!-- 地球图标 -->
+  <circle cx="12" cy="12" r="10" stroke="#8B4513" stroke-width="2" fill="none"/>
+  <!-- 经线 -->
+  <path d="M12 2V22" stroke="#8B4513" stroke-width="1.5" stroke-opacity="0.6"/>
+  <!-- 纬线 -->
+  <path d="M2 12H22" stroke="#8B4513" stroke-width="1.5" stroke-opacity="0.6"/>
+  <!-- 弧线 -->
+  <path d="M4 6C6.5 8 17.5 8 20 6" stroke="#8B4513" stroke-width="1.5" stroke-opacity="0.6"/>
+  <path d="M4 18C6.5 16 17.5 16 20 18" stroke="#8B4513" stroke-width="1.5" stroke-opacity="0.6"/>
+  <path d="M7 3.5C10 9.5 14 9.5 17 3.5" stroke="#8B4513" stroke-width="1.5" stroke-opacity="0.6"/>
+  <path d="M7 20.5C10 14.5 14 14.5 17 20.5" stroke="#8B4513" stroke-width="1.5" stroke-opacity="0.6"/>
+</svg>

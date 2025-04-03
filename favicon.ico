@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- 背景圆形 -->
+  <circle cx="16" cy="16" r="15" fill="#D2B48C" stroke="#8B4513" stroke-width="1"/>
+  
+  <!-- 图片框 -->
+  <rect x="8" y="8" width="16" height="12" rx="2" fill="#FFFFFF" stroke="#8B4513" stroke-width="1"/>
+  
+  <!-- 字幕线条 -->
+  <line x1="10" y1="24" x2="22" y2="24" stroke="#8B4513" stroke-width="2" stroke-linecap="round"/>
+  <line x1="12" y1="27" x2="20" y2="27" stroke="#8B4513" stroke-width="2" stroke-linecap="round"/>
+</svg>

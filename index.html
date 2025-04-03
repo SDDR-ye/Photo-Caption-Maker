@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片字幕生成器</title>
+    <!-- 引入样式表 -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- 网页图标 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="一个简单易用的在线图片字幕生成工具，可以为图片添加自定义文字、调整字体样式和位置">
+</head>
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-title">
+                    <h1 data-i18n="app.title">图片字幕生成器</h1>
+                    <p class="subtitle" data-i18n="app.subtitle">为你的图片添加精美字幕</p>
+                </div>
+                <div id="languageSelectorContainer" class="language-selector-container"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="container">
+        <!-- 图片上传区域 -->
+        <section class="upload-section">
+            <div class="upload-area" id="dropArea">
+                <div class="upload-instructions">
+                    <img src="upload-icon.svg" alt="上传图标" class="upload-icon" data-i18n="upload.icon">
+                    <p data-i18n="upload.dropText">拖放图片到这里或</p>
+                    <label for="fileInput" class="upload-button" data-i18n="upload.buttonText">选择图片</label>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+                <p class="upload-hint" data-i18n="upload.hint">支持JPG、PNG、GIF格式，最大10MB</p>
+            </div>
+        </section>
+
+        <!-- 编辑区域 (初始隐藏，上传图片后显示) -->
+        <section class="editor-section" id="editorSection" style="display: none;">
+            <div class="editor-container">
+                <!-- 图片预览区域 -->
+                <div class="preview-area">
+                    <div class="canvas-container">
+                        <canvas id="imageCanvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- 编辑控制面板 -->
+                <div class="control-panel">
+                    <h2 data-i18n="editor.title">字幕设置</h2>
+                    
+                    <!-- 文字输入 -->
+                    <div class="control-group">
+                        <label for="textInput" data-i18n="editor.textInput.label">字幕文字</label>
+                        <textarea id="textInput" data-i18n="editor.textInput.placeholder" placeholder="在这里输入字幕文字..."></textarea>
+                    </div>
+                    
+                    <!-- 字体设置 -->
+                    <div class="control-group">
+                        <label for="fontFamily" data-i18n="editor.fontFamily.label">字体</label>
+                        <select id="fontFamily">
+                            <option value="Arial, sans-serif" data-i18n="editor.fontFamily.default">默认</option>
+                            <option value="'Microsoft YaHei', sans-serif" data-i18n="editor.fontFamily.msYahei">微软雅黑</option>
+                            <option value="'SimSun', serif" data-i18n="editor.fontFamily.simsun">宋体</option>
+                            <option value="'KaiTi', serif" data-i18n="editor.fontFamily.kaiti">楷体</option>
+                            <option value="'SimHei', sans-serif" data-i18n="editor.fontFamily.simhei">黑体</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 字体大小 -->
+                    <div class="control-group">
+                        <label for="fontSize" data-i18n="editor.fontSize.label">字体大小</label>
+                        <div class="range-container">
+                            <input type="range" id="fontSize" min="12" max="72" value="32">
+                            <span id="fontSizeValue">32px</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 字体颜色 -->
+                    <div class="control-group">
+                        <label for="fontColor" data-i18n="editor.fontColor.label">字体颜色</label>
+                        <input type="color" id="fontColor" value="#ffffff">
+                    </div>
+                    
+                    <!-- 字体粗细 -->
+                    <div class="control-group">
+                        <label for="fontWeight" data-i18n="editor.fontWeight.label">字体粗细</label>
+                        <select id="fontWeight">
+                            <option value="normal" data-i18n="editor.fontWeight.normal">正常</option>
+                            <option value="bold" data-i18n="editor.fontWeight.bold">粗体</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 字体外边框 -->
+                    <div class="control-group">
+                        <label for="textStroke" data-i18n="editor.textStroke.label">字体外边框</label>
+                        <select id="textStroke">
+                            <option value="none" data-i18n="editor.textStroke.none">无</option>
+                            <option value="thin" data-i18n="editor.textStroke.thin">细</option>
+                            <option value="medium" data-i18n="editor.textStroke.medium">中等</option>
+                            <option value="thick" data-i18n="editor.textStroke.thick">粗</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 字体外边框颜色 -->
+                    <div class="control-group" id="textStrokeColorGroup" style="display: none;">
+                        <label for="textStrokeColor" data-i18n="editor.textStrokeColor.label">外边框颜色</label>
+                        <input type="color" id="textStrokeColor" value="#000000">
+                    </div>
+                    
+                    <!-- 水印选项 -->
+                    <div class="control-group">
+                        <label for="watermarkToggle" data-i18n="editor.watermark.toggleLabel">添加水印</label>
+                        <div class="toggle-container">
+                            <input type="checkbox" id="watermarkToggle">
+                            <label for="watermarkToggle" class="toggle-label"></label>
+                        </div>
+                    </div>
+                    
+                    <div id="watermarkOptions" style="display: none;">
+                        <div class="control-group">
+                            <label for="watermarkText" data-i18n="editor.watermark.textLabel">水印文字</label>
+                            <input type="text" id="watermarkText" placeholder="输入水印文字" data-i18n="editor.watermark.textPlaceholder">
+                        </div>
+                        
+                        <!-- 水印透明度 -->
+                        <div class="control-group">
+                            <label for="watermarkOpacity" data-i18n="editor.watermark.opacityLabel">透明度</label>
+                            <div class="range-container">
+                                <input type="range" id="watermarkOpacity" min="10" max="100" value="50">
+                                <span id="watermarkOpacityValue">50%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 水印字体大小 -->
+                        <div class="control-group">
+                            <label for="watermarkSize" data-i18n="editor.watermark.sizeLabel">字体大小</label>
+                            <div class="range-container">
+                                <input type="range" id="watermarkSize" min="8" max="36" value="14">
+                                <span id="watermarkSizeValue">14px</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 水印颜色 -->
+                        <div class="control-group">
+                            <label for="watermarkColor" data-i18n="editor.watermark.colorLabel">颜色</label>
+                            <input type="color" id="watermarkColor" value="#ffffff">
+                        </div>
+                    </div>
+                    
+                    <!-- 操作按钮 -->
+                    <div class="action-buttons">
+                        <button id="resetBtn" class="secondary-btn" data-i18n="editor.buttons.reset">重置</button>
+                        <button id="downloadBtn" class="primary-btn" data-i18n="editor.buttons.download">图片下载</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p><span data-i18n="footer.copyright">© 2025 图片字幕生成器</span> | <a href="#" id="helpLink" data-i18n="footer.help">使用帮助</a></p>
+        </div>
+    </footer>
+
+    <!-- 帮助弹窗 -->
+    <div class="modal" id="helpModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 data-i18n="help.title">使用帮助</h2>
+            <div class="help-content">
+                <h3 data-i18n="help.howToUse">如何使用图片字幕生成器</h3>
+                <ol>
+                    <li data-i18n="help.steps.0">点击"选择图片"按钮或将图片拖放到上传区域</li>
+                    <li data-i18n="help.steps.1">在右侧编辑面板中输入字幕文字</li>
+                    <li data-i18n="help.steps.2">调整字体、大小、颜色和位置</li>
+                    <li data-i18n="help.steps.3">可选择添加水印</li>
+                    <li data-i18n="help.steps.4">点击"生成图片"预览效果</li>
+                    <li data-i18n="help.steps.5">满意后点击"下载"保存结果</li>
+                </ol>
+                <h3 data-i18n="help.faq.title">常见问题</h3>
+                <p><strong data-i18n="help.faq.q1">问：支持哪些图片格式？</strong><br><span data-i18n="help.faq.a1">答：支持JPG、PNG、GIF等常见图片格式。</span></p>
+                <p><strong data-i18n="help.faq.q2">问：有文件大小限制吗？</strong><br><span data-i18n="help.faq.a2">答：单个文件最大支持10MB。</span></p>
+                <p><strong data-i18n="help.faq.q3">问：如何调整字幕位置？</strong><br><span data-i18n="help.faq.a3">答：点击位置网格中的按钮可以快速定位字幕位置。</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 预览弹窗 -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content preview-modal-content">
+            <span class="close-btn" id="previewCloseBtn">&times;</span>
+            <h2 data-i18n="preview.title">图片预览</h2>
+            <div class="preview-content">
+                <img id="previewImage" alt="预览图片">
+                <div class="preview-actions">
+                    <button id="confirmDownloadBtn" class="primary-btn" data-i18n="preview.confirmButton">下载图片</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入JavaScript -->
+    <script src="js/i18n.js"></script>
+    <script src="js/languageSelector.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // 初始化多语言支持和语言选择器
+        document.addEventListener('DOMContentLoaded', async function() {
+            // 初始化多语言支持
+            await window.i18n.init();
+            
+            // 初始化语言选择器
+            const languageSelector = new LanguageSelector('languageSelectorContainer');
+            await languageSelector.init();
+        });
+    </script>
+</body>
+</html>
