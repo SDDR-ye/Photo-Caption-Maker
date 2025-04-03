@@ -1,0 +1,90 @@
+{
+  "app": {
+    "title": "Générateur de Légendes d'Images",
+    "subtitle": "Ajoutez de belles légendes à vos images",
+    "description": "Un outil de légende d'image en ligne simple et facile à utiliser qui vous permet d'ajouter du texte personnalisé, d'ajuster les styles de police et les positions"
+  },
+  "upload": {
+    "dropText": "Déposez l'image ici ou",
+    "buttonText": "Choisir une Image",
+    "hint": "Supporte les formats JPG, PNG, GIF, max 10MB",
+    "icon": "Icône de téléchargement"
+  },
+  "editor": {
+    "title": "Paramètres de Légende",
+    "textInput": {
+      "label": "Texte de Légende",
+      "placeholder": "Entrez votre texte de légende ici..."
+    },
+    "fontFamily": {
+      "label": "Police",
+      "default": "Par défaut",
+      "msYahei": "Microsoft YaHei",
+      "simsun": "SimSun",
+      "kaiti": "KaiTi",
+      "simhei": "SimHei"
+    },
+    "fontSize": {
+      "label": "Taille de Police"
+    },
+    "fontColor": {
+      "label": "Couleur de Police"
+    },
+    "fontWeight": {
+      "label": "Épaisseur de Police",
+      "normal": "Normal",
+      "bold": "Gras"
+    },
+    "textStroke": {
+      "label": "Contour du Texte",
+      "none": "Aucun",
+      "thin": "Fin",
+      "medium": "Moyen",
+      "thick": "Épais"
+    },
+    "textStrokeColor": {
+      "label": "Couleur du Contour"
+    },
+    "watermark": {
+      "toggleLabel": "Ajouter un Filigrane",
+      "textLabel": "Texte du Filigrane",
+      "textPlaceholder": "Entrez le texte du filigrane",
+      "opacityLabel": "Opacité",
+      "sizeLabel": "Taille de Police",
+      "colorLabel": "Couleur"
+    },
+    "buttons": {
+      "reset": "Réinitialiser",
+      "download": "Télécharger l'Image"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Générateur de Légendes d'Images",
+    "help": "Aide"
+  },
+  "help": {
+    "title": "Aide",
+    "howToUse": "Comment utiliser le Générateur de Légendes d'Images",
+    "steps": [
+      "Cliquez sur le bouton 'Choisir une Image' ou glissez-déposez une image dans la zone de téléchargement",
+      "Entrez le texte de la légende dans le panneau d'édition à droite",
+      "Ajustez la police, la taille, la couleur et la position",
+      "Ajoutez éventuellement un filigrane",
+      "Cliquez sur 'Générer l'Image' pour prévisualiser le résultat",
+      "Cliquez sur 'Télécharger' pour enregistrer le résultat lorsque vous êtes satisfait"
+    ],
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "q1": "Q: Quels formats d'image sont pris en charge?",
+      "a1": "R: JPG, PNG, GIF et autres formats d'image courants sont pris en charge.",
+      "q2": "Q: Y a-t-il une limite de taille de fichier?",
+      "a2": "R: Oui, la taille maximale du fichier est de 10MB.",
+      "q3": "Q: Comment ajuster la position de la légende?",
+      "a3": "R: Cliquez sur les boutons de la grille de position pour positionner rapidement votre légende."
+    }
+  },
+  "preview": {
+    "title": "Aperçu de l'Image",
+    "confirmButton": "Télécharger l'Image"
+  }
+}

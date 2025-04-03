@@ -1,0 +1,90 @@
+{
+  "app": {
+    "title": "Generador de Subtítulos para Imágenes",
+    "subtitle": "Añade hermosos subtítulos a tus imágenes",
+    "description": "Una herramienta en línea simple y fácil de usar para añadir texto personalizado, ajustar estilos de fuente y posiciones en tus imágenes"
+  },
+  "upload": {
+    "dropText": "Arrastra una imagen aquí o",
+    "buttonText": "Seleccionar Imagen",
+    "hint": "Soporta formatos JPG, PNG, GIF, máximo 10MB",
+    "icon": "Icono de carga"
+  },
+  "editor": {
+    "title": "Configuración de Subtítulos",
+    "textInput": {
+      "label": "Texto del Subtítulo",
+      "placeholder": "Escribe tu texto aquí..."
+    },
+    "fontFamily": {
+      "label": "Fuente",
+      "default": "Predeterminada",
+      "msYahei": "Microsoft YaHei",
+      "simsun": "SimSun",
+      "kaiti": "KaiTi",
+      "simhei": "SimHei"
+    },
+    "fontSize": {
+      "label": "Tamaño de Fuente"
+    },
+    "fontColor": {
+      "label": "Color de Fuente"
+    },
+    "fontWeight": {
+      "label": "Grosor de Fuente",
+      "normal": "Normal",
+      "bold": "Negrita"
+    },
+    "textStroke": {
+      "label": "Contorno de Texto",
+      "none": "Ninguno",
+      "thin": "Fino",
+      "medium": "Medio",
+      "thick": "Grueso"
+    },
+    "textStrokeColor": {
+      "label": "Color de Contorno"
+    },
+    "watermark": {
+      "toggleLabel": "Añadir Marca de Agua",
+      "textLabel": "Texto de Marca de Agua",
+      "textPlaceholder": "Ingresa texto para marca de agua",
+      "opacityLabel": "Opacidad",
+      "sizeLabel": "Tamaño de Fuente",
+      "colorLabel": "Color"
+    },
+    "buttons": {
+      "reset": "Reiniciar",
+      "download": "Descargar Imagen"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Generador de Subtítulos para Imágenes",
+    "help": "Ayuda"
+  },
+  "help": {
+    "title": "Ayuda",
+    "howToUse": "Cómo usar el Generador de Subtítulos para Imágenes",
+    "steps": [
+      "Haz clic en el botón 'Seleccionar Imagen' o arrastra y suelta una imagen en el área de carga",
+      "Ingresa el texto del subtítulo en el panel de edición de la derecha",
+      "Ajusta la fuente, tamaño, color y posición",
+      "Opcionalmente añade una marca de agua",
+      "Haz clic en 'Generar Imagen' para previsualizar el resultado",
+      "Haz clic en 'Descargar' para guardar el resultado cuando estés satisfecho"
+    ],
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "P: ¿Qué formatos de imagen son compatibles?",
+      "a1": "R: Se admiten JPG, PNG, GIF y otros formatos comunes de imagen.",
+      "q2": "P: ¿Hay un límite de tamaño de archivo?",
+      "a2": "R: Sí, el tamaño máximo de archivo es de 10MB.",
+      "q3": "P: ¿Cómo ajusto la posición del subtítulo?",
+      "a3": "R: Haz clic en los botones de la cuadrícula de posición para ubicar rápidamente tu subtítulo."
+    }
+  },
+  "preview": {
+    "title": "Vista Previa de Imagen",
+    "confirmButton": "Descargar Imagen"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "app": {
+    "title": "Image Caption Generator",
+    "subtitle": "Add beautiful captions to your images",
+    "description": "A simple and easy-to-use online image caption tool that allows you to add custom text, adjust font styles and positions"
+  },
+  "upload": {
+    "dropText": "Drop image here or",
+    "buttonText": "Choose Image",
+    "hint": "Supports JPG, PNG, GIF formats, max 10MB",
+    "icon": "Upload icon"
+  },
+  "editor": {
+    "title": "Caption Settings",
+    "textInput": {
+      "label": "Caption Text",
+      "placeholder": "Enter your caption text here..."
+    },
+    "fontFamily": {
+      "label": "Font",
+      "default": "Default",
+      "msYahei": "Microsoft YaHei",
+      "simsun": "SimSun",
+      "kaiti": "KaiTi",
+      "simhei": "SimHei"
+    },
+    "fontSize": {
+      "label": "Font Size"
+    },
+    "fontColor": {
+      "label": "Font Color"
+    },
+    "fontWeight": {
+      "label": "Font Weight",
+      "normal": "Normal",
+      "bold": "Bold"
+    },
+    "textStroke": {
+      "label": "Text Outline",
+      "none": "None",
+      "thin": "Thin",
+      "medium": "Medium",
+      "thick": "Thick"
+    },
+    "textStrokeColor": {
+      "label": "Outline Color"
+    },
+    "watermark": {
+      "toggleLabel": "Add Watermark",
+      "textLabel": "Watermark Text",
+      "textPlaceholder": "Enter watermark text",
+      "opacityLabel": "Opacity",
+      "sizeLabel": "Font Size",
+      "colorLabel": "Color"
+    },
+    "buttons": {
+      "reset": "Reset",
+      "download": "Download Image"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Image Caption Generator",
+    "help": "Help"
+  },
+  "help": {
+    "title": "Help",
+    "howToUse": "How to Use Image Caption Generator",
+    "steps": [
+      "Click the 'Choose Image' button or drag and drop an image to the upload area",
+      "Enter caption text in the right editing panel",
+      "Adjust font, size, color, and position",
+      "Optionally add a watermark",
+      "Click 'Generate Image' to preview the result",
+      "Click 'Download' to save the result when satisfied"
+    ],
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Q: What image formats are supported?",
+      "a1": "A: JPG, PNG, GIF and other common image formats are supported.",
+      "q2": "Q: Is there a file size limit?",
+      "a2": "A: Yes, the maximum file size is 10MB.",
+      "q3": "Q: How do I adjust the caption position?",
+      "a3": "A: Click the buttons in the position grid to quickly position your caption."
+    }
+  },
+  "preview": {
+    "title": "Image Preview",
+    "confirmButton": "Download Image"
+  }
+}

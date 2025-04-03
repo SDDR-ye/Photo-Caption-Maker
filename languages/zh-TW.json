@@ -1,0 +1,90 @@
+{
+  "app": {
+    "title": "圖片字幕生成器",
+    "subtitle": "為你的圖片添加精美字幕",
+    "description": "一個簡單易用的線上圖片字幕生成工具，可以為圖片添加自定義文字、調整字體樣式和位置"
+  },
+  "upload": {
+    "dropText": "拖放圖片到這裡或",
+    "buttonText": "選擇圖片",
+    "hint": "支持JPG、PNG、GIF格式，最大10MB",
+    "icon": "上傳圖標"
+  },
+  "editor": {
+    "title": "字幕設置",
+    "textInput": {
+      "label": "字幕文字",
+      "placeholder": "在這裡輸入字幕文字..."
+    },
+    "fontFamily": {
+      "label": "字體",
+      "default": "默認",
+      "msYahei": "微軟雅黑",
+      "simsun": "宋體",
+      "kaiti": "楷體",
+      "simhei": "黑體"
+    },
+    "fontSize": {
+      "label": "字體大小"
+    },
+    "fontColor": {
+      "label": "字體顏色"
+    },
+    "fontWeight": {
+      "label": "字體粗細",
+      "normal": "正常",
+      "bold": "粗體"
+    },
+    "textStroke": {
+      "label": "字體外邊框",
+      "none": "無",
+      "thin": "細",
+      "medium": "中等",
+      "thick": "粗"
+    },
+    "textStrokeColor": {
+      "label": "外邊框顏色"
+    },
+    "watermark": {
+      "toggleLabel": "添加浮水印",
+      "textLabel": "浮水印文字",
+      "textPlaceholder": "輸入浮水印文字",
+      "opacityLabel": "透明度",
+      "sizeLabel": "字體大小",
+      "colorLabel": "顏色"
+    },
+    "buttons": {
+      "reset": "重置",
+      "download": "圖片下載"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 圖片字幕生成器",
+    "help": "使用幫助"
+  },
+  "help": {
+    "title": "使用幫助",
+    "howToUse": "如何使用圖片字幕生成器",
+    "steps": [
+      "點擊\"選擇圖片\"按鈕或將圖片拖放到上傳區域",
+      "在右側編輯面板中輸入字幕文字",
+      "調整字體、大小、顏色和位置",
+      "可選擇添加浮水印",
+      "點擊\"生成圖片\"預覽效果",
+      "滿意後點擊\"下載\"保存結果"
+    ],
+    "faq": {
+      "title": "常見問題",
+      "q1": "問：支持哪些圖片格式？",
+      "a1": "答：支持JPG、PNG、GIF等常見圖片格式。",
+      "q2": "問：有文件大小限制嗎？",
+      "a2": "答：單個文件最大支持10MB。",
+      "q3": "問：如何調整字幕位置？",
+      "a3": "答：點擊位置網格中的按鈕可以快速定位字幕位置。"
+    }
+  },
+  "preview": {
+    "title": "圖片預覽",
+    "confirmButton": "下載圖片"
+  }
+}

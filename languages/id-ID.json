@@ -1,0 +1,90 @@
+{
+  "app": {
+    "title": "Generator Keterangan Gambar",
+    "subtitle": "Tambahkan keterangan indah ke gambar Anda",
+    "description": "Alat keterangan gambar online yang sederhana dan mudah digunakan yang memungkinkan Anda menambahkan teks kustom, menyesuaikan gaya font dan posisi"
+  },
+  "upload": {
+    "dropText": "Jatuhkan gambar di sini atau",
+    "buttonText": "Pilih Gambar",
+    "hint": "Mendukung format JPG, PNG, GIF, maksimal 10MB",
+    "icon": "Ikon unggah"
+  },
+  "editor": {
+    "title": "Pengaturan Keterangan",
+    "textInput": {
+      "label": "Teks Keterangan",
+      "placeholder": "Masukkan teks keterangan Anda di sini..."
+    },
+    "fontFamily": {
+      "label": "Font",
+      "default": "Default",
+      "msYahei": "Microsoft YaHei",
+      "simsun": "SimSun",
+      "kaiti": "KaiTi",
+      "simhei": "SimHei"
+    },
+    "fontSize": {
+      "label": "Ukuran Font"
+    },
+    "fontColor": {
+      "label": "Warna Font"
+    },
+    "fontWeight": {
+      "label": "Ketebalan Font",
+      "normal": "Normal",
+      "bold": "Tebal"
+    },
+    "textStroke": {
+      "label": "Garis Tepi Teks",
+      "none": "Tidak Ada",
+      "thin": "Tipis",
+      "medium": "Sedang",
+      "thick": "Tebal"
+    },
+    "textStrokeColor": {
+      "label": "Warna Garis Tepi"
+    },
+    "watermark": {
+      "toggleLabel": "Tambahkan Tanda Air",
+      "textLabel": "Teks Tanda Air",
+      "textPlaceholder": "Masukkan teks tanda air",
+      "opacityLabel": "Keburaman",
+      "sizeLabel": "Ukuran Font",
+      "colorLabel": "Warna"
+    },
+    "buttons": {
+      "reset": "Reset",
+      "download": "Unduh Gambar"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Generator Keterangan Gambar",
+    "help": "Bantuan"
+  },
+  "help": {
+    "title": "Bantuan",
+    "howToUse": "Cara Menggunakan Generator Keterangan Gambar",
+    "steps": [
+      "Klik tombol 'Pilih Gambar' atau seret dan jatuhkan gambar ke area unggah",
+      "Masukkan teks keterangan di panel pengeditan di sebelah kanan",
+      "Sesuaikan font, ukuran, warna, dan posisi",
+      "Secara opsional tambahkan tanda air",
+      "Klik 'Hasilkan Gambar' untuk melihat pratinjau hasil",
+      "Klik 'Unduh' untuk menyimpan hasil ketika Anda puas"
+    ],
+    "faq": {
+      "title": "Pertanyaan yang Sering Diajukan",
+      "q1": "T: Format gambar apa yang didukung?",
+      "a1": "J: JPG, PNG, GIF dan format gambar umum lainnya didukung.",
+      "q2": "T: Apakah ada batasan ukuran file?",
+      "a2": "J: Ya, ukuran file maksimum adalah 10MB.",
+      "q3": "T: Bagaimana cara menyesuaikan posisi keterangan?",
+      "a3": "J: Klik tombol di grid posisi untuk dengan cepat memposisikan keterangan Anda."
+    }
+  },
+  "preview": {
+    "title": "Pratinjau Gambar",
+    "confirmButton": "Unduh Gambar"
+  }
+}

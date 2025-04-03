@@ -1,0 +1,90 @@
+{
+  "app": {
+    "title": "Gerador de Legendas para Imagens",
+    "subtitle": "Adicione legendas bonitas às suas imagens",
+    "description": "Uma ferramenta online simples e fácil de usar para adicionar texto personalizado, ajustar estilos de fonte e posições em suas imagens"
+  },
+  "upload": {
+    "dropText": "Arraste uma imagem aqui ou",
+    "buttonText": "Escolher Imagem",
+    "hint": "Suporta formatos JPG, PNG, GIF, máximo 10MB",
+    "icon": "Ícone de upload"
+  },
+  "editor": {
+    "title": "Configurações de Legenda",
+    "textInput": {
+      "label": "Texto da Legenda",
+      "placeholder": "Digite seu texto de legenda aqui..."
+    },
+    "fontFamily": {
+      "label": "Fonte",
+      "default": "Padrão",
+      "msYahei": "Microsoft YaHei",
+      "simsun": "SimSun",
+      "kaiti": "KaiTi",
+      "simhei": "SimHei"
+    },
+    "fontSize": {
+      "label": "Tamanho da Fonte"
+    },
+    "fontColor": {
+      "label": "Cor da Fonte"
+    },
+    "fontWeight": {
+      "label": "Espessura da Fonte",
+      "normal": "Normal",
+      "bold": "Negrito"
+    },
+    "textStroke": {
+      "label": "Contorno do Texto",
+      "none": "Nenhum",
+      "thin": "Fino",
+      "medium": "Médio",
+      "thick": "Grosso"
+    },
+    "textStrokeColor": {
+      "label": "Cor do Contorno"
+    },
+    "watermark": {
+      "toggleLabel": "Adicionar Marca d'água",
+      "textLabel": "Texto da Marca d'água",
+      "textPlaceholder": "Digite o texto da marca d'água",
+      "opacityLabel": "Opacidade",
+      "sizeLabel": "Tamanho da Fonte",
+      "colorLabel": "Cor"
+    },
+    "buttons": {
+      "reset": "Redefinir",
+      "download": "Baixar Imagem"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Gerador de Legendas para Imagens",
+    "help": "Ajuda"
+  },
+  "help": {
+    "title": "Ajuda",
+    "howToUse": "Como usar o Gerador de Legendas para Imagens",
+    "steps": [
+      "Clique no botão 'Escolher Imagem' ou arraste e solte uma imagem na área de upload",
+      "Digite o texto da legenda no painel de edição à direita",
+      "Ajuste a fonte, tamanho, cor e posição",
+      "Opcionalmente adicione uma marca d'água",
+      "Clique em 'Gerar Imagem' para visualizar o resultado",
+      "Clique em 'Baixar' para salvar o resultado quando estiver satisfeito"
+    ],
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "q1": "P: Quais formatos de imagem são suportados?",
+      "a1": "R: JPG, PNG, GIF e outros formatos comuns de imagem são suportados.",
+      "q2": "P: Existe um limite de tamanho de arquivo?",
+      "a2": "R: Sim, o tamanho máximo do arquivo é 10MB.",
+      "q3": "P: Como ajusto a posição da legenda?",
+      "a3": "R: Clique nos botões na grade de posição para posicionar rapidamente sua legenda."
+    }
+  },
+  "preview": {
+    "title": "Pré-visualização da Imagem",
+    "confirmButton": "Baixar Imagem"
+  }
+}
